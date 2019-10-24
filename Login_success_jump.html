@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>跳转</title>
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <script language="javascript">
+        var secs = 3; //倒计时的秒数
+        var URL;
+        function Load(url) {
+            URL = url;
+            for (var i = secs; i >= 0; i--) {
+                window.setTimeout('doUpdate(' + i + ')', (secs - i) * 1000);
+            }
+        }
+        function doUpdate(num) {
+            document.getElementById('ShowDiv').innerHTML = '将在' + num + '秒后自动跳转到主页';
+            if (num == 0) { window.location = URL; }
+        }
+        //传过来的id
+        $(function () {
+            //console.log(location.search.concat());
+            //manyValues();
+            $("#show").html(oneValues());
+        })
+
+        //接收一个值
+        function oneValues() {
+            var result;
+            var url = window.location.search; //获取url中"?"符后的字串  
+            if (url.indexOf("?") != -1) {
+                result = url.substr(url.indexOf("=") + 1);
+            }
+            return result;
+        }
+    </script>
+</head>
+<body onload="Load('index.html')">
+    登录成功
+    <div id="ShowDiv"></div>
+
+    <span>接收的值是：</span>
+    <span id="show"></span>
+</body>
+</html>

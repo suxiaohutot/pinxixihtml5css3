@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="pinxixi" Class="DataPinxixiDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=pinxixi;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="pinxixiConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bill" Member="Bill">
+    <Type Name="Bill">
+      <Column Name="Bid" Type="System.String" DbType="NChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Uid" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Column Name="Uname" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cid" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cname" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Ccategory" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cnumber" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="Cprice" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Csumprice" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Bcomment" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Bdatetime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comment" Member="Comment">
+    <Type Name="Comment">
+      <Column Name="Cid" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Uid" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Ucomment" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shopping_Cart" Member="Shopping_Cart">
+    <Type Name="Shopping_Cart">
+      <Column Name="Sid" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cid" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cname" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cprice" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cnumber" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Csumprice" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cphotopath" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Commodity" Member="Commodity">
+    <Type Name="Commodity">
+      <Column Name="Cid" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Cname" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Ccategory" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cprice" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cnumber" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Cphotopath" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Admin" Member="Admin">
+    <Type Name="Admin">
+      <Column Name="Aid" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Apwd" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="User">
+    <Type Name="User">
+      <Column Name="Uid" Type="System.String" DbType="NChar(11) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Uname" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Upwd" Type="System.String" DbType="NChar(16)" CanBeNull="true" />
+      <Column Name="Ufrozen" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
