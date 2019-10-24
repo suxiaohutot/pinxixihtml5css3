@@ -17,44 +17,6 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="js/jquery-3.4.0.min.js"></script> 
     <script src="js/Login_check.js"></script>  
-    
-    <script>
-        //function myData() {
-
-        //    var v1 = $("#acc").val();
-        //    var v2 = $("#psw").val();
-
-
-        //    $(document).ready(function () {
-        //        $.ajax({
-        //            type: "post",
-        //            url: "Login.ashx",
-        //            data: {
-        //                midAcc: v1, midPsw: v2
-        //            },
-        //            success: function (data) {
-        //                alert(data);//这个data是接收login.ashx返回过来的信息
-        //            }
-        //        });
-        //    });
-        //}
-
-
-        //$(function () {
-        //    name = $("#iname").text();
-        //    pwd = $("#ipwd").text();
-
-        //    $("#btn").on("click", function () {
-        //        jump2();
-        //    });
-        //});
-
-        //function jump2() {
-        //    document.cookie = "name=" + name;
-        //    document.cookie = "age=" + pwd;
-        //    window.location.href = "index.html";
-        //}
-    </script>
 </head>
 
 <body>
@@ -81,13 +43,10 @@
                                     <li>
                                         <a href="index.html">首页</a>
                                     </li>
-                                    <li class="menu-item-has-children">
+                                    <li>
                                         <a href="shop-left-sidebar.html">购物</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="shop-left-sidebar.html">选择物品</a></li>
-                                            <li><a href="shop-full-width.html">大图阅览</a></li>
-                                        </ul>
                                     </li>
+
                                     <li class="menu-item-has-children">
                                         <a href="#">我的</a>
                                         <ul class="sub-menu">
@@ -186,13 +145,10 @@
                             <li>
                                 <a href="index.html">首页</a>
                             </li>
-                            <li class="menu-item-has-children">
+                            <li>
                                 <a href="shop-left-sidebar.html">购物</a>
-                                <ul class="sub-menu">
-                                    <li><a href="shop-left-sidebar.html">选择物品</a></li>
-                                    <li><a href="shop-full-width.html">大图阅览</a></li>
-                                </ul>
                             </li>
+
                             <li class="menu-item-has-children">
                                 <a href="#">我的</a>
                                 <ul class="sub-menu">
@@ -248,13 +204,13 @@
 
                     <div class="col-lg-4 col-0 mb-0"></div>   <!--   占位空间 -->
                     <div class="col-lg-4 col-12 mb-40">
-                        <div class="login-register-form-wrap">
+                        <div class="login-register-form-wrap"><!--   -->
                             <!-- 登录开始一般处理程序 action="/ashx/Login_check.ashx" --><!-- 登录开始一般处理程序 --><!-- 登录开始一般处理程序 --><!-- 登录开始一般处理程序 -->
-                            <form class="mb-30" nethod="post" action="/ashx/Login_check.ashx">
-                                <!--   ashx/    -->
+                            <form class="mb-30">
+                                <!--   ashx/    nethod="post" action="/ashx/Login_check.ashx"type="number"-->
                                 <div class="row">
                                     <div class="col-12 mb-15">
-                                        <input type="text" name="textName" id="iname" placeholder="账号"><h5><span id="inamecheck"></span></h5>
+                                        <input onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" name="textName" id="iname" placeholder="账号(数字)">
                                     </div>
                                     <div class="col-12 mb-15">
                                         <input type="password" name="textPwd" id="ipwd" placeholder="密码"><h5><span id="ipwdcheck"></span></h5>
@@ -283,42 +239,13 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </divclass="login-register-form-wrap">
                     </div>
                 </div>
             </div>
         </div>
         <!-- Login e -->
-        <!-- 订阅 s -->
-        <div class="subscribe-section section bg-light-blue pt-55 pb-55">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-10 ml-auto mr-auto col-12">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-12 mb-15 mt-15">
-                                <div class="subscribe-content">
-                                    <h2>订阅我们的时事通讯</h2>
-                                    <h4>立即订阅并获得15%<br>折扣杯代码</h4>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-12 mb-15 mt-15">
-                                <form id="mc-form" class="mc-form subscribe-form">
-                                    <input id="mc-email" type="email" autocomplete="off" placeholder="在此输入您的邮箱" />
-                                    <button id="mc-submit">订阅</button>
-                                </form>
-                                <div class="mailchimp-alerts text-centre">
-                                    <div class="mailchimp-submitting"></div>
-                                    <div class="mailchimp-success"></div>
-                                    <div class="mailchimp-error"></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 订阅 e -->
+        
         <!--  Footer S -->
         <footer class="footer-section section">
             <!--  Footer s -->
@@ -420,7 +347,6 @@
                         </div>
 
                         <div class="col-sm-4 col-lg-3 m-auto order-2 text-center text-md-right">
-                            <img src="images/payments.png" alt="Payment Method" />
                         </div>
                     </div>
                 </div>

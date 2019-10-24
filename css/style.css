@@ -3238,7 +3238,7 @@ img.mfp-img {
         font-size: 18px;
         line-height: 24px; } }
 
-/*-- Contact Form --*/
+/* Contact Form */
 .contact-form {
   max-width: 600px;
   padding: 90px 60px;
@@ -3344,9 +3344,9 @@ img.mfp-img {
   height: 500px;
   width: 100%; }
 
-/*==================
+/* 
 Call to action
-===================*/
+ */
 .call-to-action-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3371,9 +3371,9 @@ Call to action
       font-size: 18px;
       line-height: 1; }
 
-/*==============================
+/* 
 Start Footer Section
-============================*/
+ */
 .footer-widget-content {
   margin-top: -30px; }
 
